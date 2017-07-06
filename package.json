@@ -1,0 +1,26 @@
+{
+  "name": "jquery-flight-search",
+  "version": "0.0.1",
+  "description": "jQuery plugin to create search box",
+  "main": "index.js",
+  "repository": "https://github.com/amonkc/jquery-flight-search.git",
+  "author": "Amon Korjarunchit <amon.kc@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.2.6",
+    "@types/webpack": "^3.0.1",
+    "css-loader": "^0.28.4",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.2.2",
+    "typescript": "^2.4.1",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  }
+}

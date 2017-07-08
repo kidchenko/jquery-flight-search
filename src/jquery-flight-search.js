@@ -1,4 +1,5 @@
-import * as jQuery from 'jquery';
+import * as $ from 'jquery';
+import './jquery-flight-search.scss';
 
 (function($) { 
 
@@ -6,7 +7,7 @@ import * as jQuery from 'jquery';
         
         let opts = $.extend(true, {}, $.fn.flightSearchBox.defaults, options);
 
-        $(this).append('<h1>Flight Search Box</h1>');
+        $(this).append('<h1 class="jquery-flight-search">Flight Search Box</h1>');
 
         return this;
     }
@@ -17,4 +18,4 @@ import * as jQuery from 'jquery';
 
 
 
-})(jQuery);
+})(window.jQuery || jQuery || $);

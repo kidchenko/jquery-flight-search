@@ -2,24 +2,39 @@
   "name": "jquery-flight-search",
   "version": "0.0.1",
   "description": "jQuery plugin to create search box",
-  "main": "./index.js",
-  "typings": "./index.d.ts",
+  "main": "./dist/jquery-flight-search.js",
+  "module": "./src/jquery-flight-search.js",
+  "typings": "./dist/jquery-flight-search.d.ts",
   "repository": "https://github.com/amonkc/jquery-flight-search.git",
   "author": "Amon Korjarunchit <amon.kc@gmail.com>",
   "license": "MIT",
   "files": [
-    "index.js"
+    "./dist/jquery-flight-search.js",
+    "./dist/jquery-flight-search.map.js",
+    "./dist/jquery-flight-search.d.ts"
   ],
+  "scripts": {
+    "dev": "webpack-dev-server --open",
+    "build": "NODE_ENV=production webpack"
+  },
   "dependencies": {
     "jquery": "^3.2.1"
   },
   "devDependencies": {
     "@types/jquery": "^3.2.6",
     "@types/webpack": "^3.0.1",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
     "css-loader": "^0.28.4",
+    "html-webpack-plugin": "^2.29.0",
+    "node-sass": "^4.5.3",
+    "path": "^0.12.7",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "ts-loader": "^2.2.2",
+    "ts-node": "^3.2.0",
     "typescript": "^2.4.1",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.0"

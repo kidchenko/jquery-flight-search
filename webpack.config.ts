@@ -5,6 +5,7 @@ declare var __dirname: any;
 declare var process: any;
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const filename = 'jquery-flight-search';
 const moduleName = 'jFlightSearch';
@@ -43,13 +44,10 @@ const config: webpack.Configuration = {
             },
             {
                 test: /\.scss$/,
-                use: [{
-                    loader: "style-loader" // creates style nodes from JS strings
-                }, {
-                    loader: "css-loader" // translates CSS into CommonJS
-                }, {
-                    loader: "sass-loader" // compiles Sass to CSS
-                }]
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader', 'sass-loader']
+                })
             }
         ]
     },
@@ -69,7 +67,8 @@ const config: webpack.Configuration = {
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery'
-        })
+        }),
+        new ExtractTextPlugin(filename + '.css')
     ]
 
 };

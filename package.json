@@ -11,6 +11,7 @@
   "files": [
     "./dist/jquery-flight-search.js",
     "./dist/jquery-flight-search.map.js",
+    "./dist/jquery-flight-search.css",
     "./src/jquery-flight-search.d.ts"
   ],
   "scripts": {
@@ -28,6 +29,7 @@
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
     "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
     "html-webpack-plugin": "^2.29.0",
     "node-sass": "^4.5.3",
     "path": "^0.12.7",

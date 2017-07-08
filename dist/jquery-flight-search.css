@@ -1,0 +1,34 @@
+.jquery-flight-search {
+  position: absolute;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4em;
+  background-color: lightgray; }
+  .jquery-flight-search-row {
+    position: relative;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+    background-color: lightblue; }
+  .jquery-flight-search-input-box, .jquery-flight-search-date-box {
+    position: relative;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    padding: 0.4em 1em;
+    background-color: lightgoldenrodyellow; }
+    .jquery-flight-search-input-box > input[type], .jquery-flight-search-date-box > input[type] {
+      width: 100%;
+      height: 50%;
+      align-self: center;
+      border: 0;
+      padding: 1em; }
+
+/*# sourceMappingURL=jquery-flight-search.css.map*/

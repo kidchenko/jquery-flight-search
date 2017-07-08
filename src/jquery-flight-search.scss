@@ -1,10 +1,40 @@
 .jquery-flight-search {
     position: absolute;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: red;
+    font-size: 1.4em;
+    background-color: lightgray;
+
+    &-row{
+        position: relative;
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: row;
+        background-color: lightblue;
+    }
+
+    &-input-box, &-date-box{
+        position: relative;
+        display: flex;
+        flex: 1 0 auto;
+        justify-content: center;
+        padding: 0.4em 1em;
+        background-color: lightgoldenrodyellow;
+
+        & > input[type] {
+            width: 100%;
+            height: 50%;
+            align-self: center;
+            border: 0;
+            padding: 1em;
+        }
+    }
 }
+

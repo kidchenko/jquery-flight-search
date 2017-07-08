@@ -16,7 +16,7 @@ const config: webpack.Configuration = {
             'jquery'
         ],
         lib: path.resolve(__dirname, 'src/' + filename + '.js'),
-        main: path.resolve(__dirname, 'src/main.js')
+        main: path.resolve(__dirname, 'src/demo.js')
     },
     output: {
         path: path.resolve(__dirname, 'sample'),

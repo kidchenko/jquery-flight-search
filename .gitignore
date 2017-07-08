@@ -58,5 +58,4 @@ typings/
 .env
 
 # distribution and sample folder
-dist/
 sample/

@@ -1,13 +1,30 @@
 import * as $ from 'jquery';
 import './jquery-flight-search.scss';
 
-(function($) { 
+(function ($) { 
+
+    let containerClass = 'jquery-flight-search';
+    
+    function createContainer() { 
+
+        return $('<div />')
+            .addClass(containerClass);
+
+    }
+
+    function inputBoxFactory() { }
+
+    function calendarPickerBoxFactory() { }
 
     $.fn.flightSearchBox = function (options) { 
         
         let opts = $.extend(true, {}, $.fn.flightSearchBox.defaults, options);
 
-        $(this).append('<h1 class="jquery-flight-search">Flight Search Box</h1>');
+        let $container = createContainer();
+        
+
+        //Insert plugin content into DOM        
+        $(this).append($container);
 
         return this;
     }

@@ -86,9 +86,6 @@ import './jquery-flight-search.scss';
     function onInputChanged(e) {
 
         let target = e.target;
-
-        console.log(parseInt(target.value), target.value);
-
         query[target.name] = isNaN(parseInt(target.value)) ? target.value : parseInt(target.value);
 
     }
@@ -100,8 +97,6 @@ import './jquery-flight-search.scss';
             departDate: getShortDate(query.departDate),
             returnDate: getShortDate(query.returnDate)
         });
-
-        console.log(finalQuery);
 
         opts.onSearch(finalQuery);
 

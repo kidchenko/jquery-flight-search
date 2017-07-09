@@ -1,6 +1,6 @@
 {
   "name": "jquery-flight-search",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "jQuery plugin to create search box",
   "main": "./dist/jquery-flight-search.js",
   "module": "./src/jquery-flight-search.js",

@@ -86,13 +86,7 @@ import './jquery-flight-search.scss';
     function onInputChanged(e) {
 
         let target = e.target;
-        query[target.name] = target.value;
-
-    }
-
-    function onDateChange(d) {
-
-        query
+        query[target.name] = parseInt(target.value) !== NaN ? parseInt(target.value) : target.value;
 
     }
 
@@ -160,9 +154,9 @@ import './jquery-flight-search.scss';
 
         //Passenger row
         $passengerRow
-            .append(inputBoxFactory('number', 'Adults', 'adults', query.adults, 1))
-            .append(inputBoxFactory('number', 'Children', 'children', query.children, 0))
-            .append(inputBoxFactory('number', 'Infants', 'infants', query.infants, 0));
+            .append(inputBoxFactory('number', 'Adults', 'adults', query.adults, 1).on('keyup', onInputChanged))
+            .append(inputBoxFactory('number', 'Children', 'children', query.children, 0).on('keyup', onInputChanged))
+            .append(inputBoxFactory('number', 'Infants', 'infants', query.infants, 0).on('keyup', onInputChanged));
 
         //Search row
         let $submitBtn = $('<button class="' + submitBtnClass + '">Search Flights</button>');

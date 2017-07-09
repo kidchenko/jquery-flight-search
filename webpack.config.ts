@@ -14,7 +14,8 @@ const config: webpack.Configuration = {
     context: __dirname,
     entry: {
         vendor: [
-            'jquery'
+            'jquery',
+            'jquery-ui/ui/widgets/datepicker'
         ],
         lib: path.resolve(__dirname, 'src/' + filename + '.js'),
         main: path.resolve(__dirname, 'src/demo.js')
@@ -47,6 +48,13 @@ const config: webpack.Configuration = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: ['css-loader', 'sass-loader']
+                })
+            },
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader']
                 })
             }
         ]

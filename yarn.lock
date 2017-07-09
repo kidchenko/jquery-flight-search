@@ -2,9 +2,15 @@
 # yarn lockfile v1
 
 
-"@types/jquery@^3.2.6":
+"@types/jquery@*", "@types/jquery@^3.2.6":
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.2.6.tgz#9890ec300a1521d282ded775d2759f82df88d7cc"
+
+"@types/jqueryui@^1.11.34":
+  version "1.11.34"
+  resolved "https://registry.yarnpkg.com/@types/jqueryui/-/jqueryui-1.11.34.tgz#0caff65df8f9ae930f87a53fa35093ab683d995d"
+  dependencies:
+    "@types/jquery" "*"
 
 "@types/node@*":
   version "8.0.8"
@@ -2398,6 +2404,10 @@ isobject@^3.0.0:
 isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
+
+jquery-ui@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
 
 jquery@^3.2.1:
   version "3.2.1"

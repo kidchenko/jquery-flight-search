@@ -1,3 +1,18 @@
+$mainBackground: ***REMOVED***;
+$fontColor: #EEEEEE;
+$inputBackground: rgba(255, 255, 255, 0.1);
+$inputBorder: 1px solid $mainBackground + 20%;
+$inputFontSize: 0.8em;
+
+@mixin box {
+    position: relative;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.4em;
+}
+
 .jquery-flight-search {
     position: absolute;
     display: flex;
@@ -6,34 +21,86 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
+    padding: 1em 10em;
+    font-family: 'system-ui';
     font-size: 1.4em;
-    background-color: lightgray;
+    color: $fontColor;
+    background-color: $mainBackground;
+    overflow: hidden;
+
+    input[type="text"], input[type="number"] {
+        color: $fontColor;
+        background-color: $inputBackground;
+        border: $inputBorder;
+        text-align: center;
+        font-size: $inputFontSize;
+        width: 100%;
+        height: 50%;
+        align-self: center;
+        padding: 1em 0;
+    }
+
+    .ui-datepicker {
+        width: 100%;
+        padding: 0.4em;
+        color: $fontColor;
+        background-color: $inputBackground;
+        border: $inputBorder;
+        font-size: $inputFontSize;
+
+        & td a {
+            text-align: center;
+            color: $fontColor;
+        }
+
+        & td a.ui-state-active {
+            background-color: rgba(255, 255, 255, 0.2);
+        } 
+    }
+
+    .hasDatepicker {
+        display: flex;
+        flex: 1 0 auto;
+    }
 
     &-row{
         position: relative;
         display: flex;
-        flex: 1 0 auto;
         flex-direction: row;
-        background-color: lightblue;
+        justify-content: space-around;
+    }
+
+    &-row-grow {
+        flex: 1 0 auto;
+    }
+
+    &-row-shrink {
+        flex: 0 0 auto;
     }
 
     &-input-box, &-date-box{
-        position: relative;
-        display: flex;
-        flex: 1 0 auto;
-        justify-content: center;
-        padding: 0.4em 1em;
-        background-color: lightgoldenrodyellow;
+        @include box();
+    }
 
-        & > input[type] {
-            width: 100%;
-            height: 50%;
-            align-self: center;
-            border: 0;
-            padding: 1em;
+    &-select-box {
+        @include box();
+    }
+
+    &-submit-button {
+        background-color: $mainBackground - 20%;
+        color: $fontColor;
+        text-align: center;
+        font-size: $inputFontSize;
+        font-weight: 700;
+        display: block;
+        padding: 1em 0;
+        border: $inputBorder;
+        margin-top: 0.4em;
+        width: 50%;
+
+        &:hover {
+            background-color: $mainBackground - 10%;
+            cursor: pointer;
         }
     }
 }

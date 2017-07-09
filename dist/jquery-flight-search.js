@@ -1593,12 +1593,10 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
     function onInputChanged(e) {
 
         var target = e.target;
-        query[target.name] = target.value;
-    }
 
-    function onDateChange(d) {
+        console.log(parseInt(target.value), target.value);
 
-        query;
+        query[target.name] = isNaN(parseInt(target.value)) ? target.value : parseInt(target.value);
     }
 
     function onSubmit() {
@@ -1655,7 +1653,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
         $dateRow.append(calendarPickerBoxFactory('Departure date', 'departDate', query.departDate)).append(calendarPickerBoxFactory('Return date', 'returnDate', query.returnDate));
 
         //Passenger row
-        $passengerRow.append(inputBoxFactory('number', 'Adults', 'adults', query.adults, 1)).append(inputBoxFactory('number', 'Children', 'children', query.children, 0)).append(inputBoxFactory('number', 'Infants', 'infants', query.infants, 0));
+        $passengerRow.append(inputBoxFactory('number', 'Adults', 'adults', query.adults, 1).on('keyup', onInputChanged)).append(inputBoxFactory('number', 'Children', 'children', query.children, 0).on('keyup', onInputChanged)).append(inputBoxFactory('number', 'Infants', 'infants', query.infants, 0).on('keyup', onInputChanged));
 
         //Search row
         var $submitBtn = $('<button class="' + submitBtnClass + '">Search Flights</button>');

@@ -86,7 +86,10 @@ import './jquery-flight-search.scss';
     function onInputChanged(e) {
 
         let target = e.target;
-        query[target.name] = parseInt(target.value) !== NaN ? parseInt(target.value) : target.value;
+
+        console.log(parseInt(target.value), target.value);
+
+        query[target.name] = isNaN(parseInt(target.value)) ? target.value : parseInt(target.value);
 
     }
 

@@ -238,7 +238,7 @@
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
-  top: 0;
+  top: -9999px;
   left: 0;
   right: 0;
   padding: 1em 10em;

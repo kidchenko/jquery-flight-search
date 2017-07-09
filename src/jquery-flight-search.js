@@ -48,7 +48,7 @@ import './jquery-flight-search.scss';
         let $submitBtn = $('<button>Search Flights</button>');
         $submitBtn.on('click', function () {
             console.log(query);
-            opts.onSearch.call(query);
+            opts.onSearch(query);
         });
 
         let $container = createContainer();

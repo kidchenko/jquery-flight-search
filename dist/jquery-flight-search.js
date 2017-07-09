@@ -137,7 +137,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
         var $submitBtn = $('<button>Search Flights</button>');
         $submitBtn.on('click', function () {
             console.log(query);
-            opts.onSearch.call(query);
+            opts.onSearch(query);
         });
 
         var $container = createContainer();

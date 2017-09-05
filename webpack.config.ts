@@ -95,7 +95,11 @@ if (process.env.NODE_ENV === 'production') {
 
     //Set externals to exclude dependencies code in distribution file
     config.externals = {
-        jquery: 'jQuery'
+        jquery: 'jQuery',
+        'jquery-ui/ui/widgets/datepicker': 'jquery-ui/ui/widgets/datepicker',
+        'jquery-ui/ui/widgets/selectmenu': 'jquery-ui/ui/widgets/selectmenu',
+        'jquery-ui/themes/base/datepicker.css': 'jquery-ui/themes/base/datepicker.css',
+        'jquery-ui/themes/base/selectmenu.css': 'jquery-ui/themes/base/selectmenu.css'
     };
 } else {
 

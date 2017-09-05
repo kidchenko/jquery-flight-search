@@ -2,5 +2,10 @@
 
 $(document).ready(function () {
     console.log("ready!");
-    $('body').flightSearchBox();
+    var jFlightSearch = $('body').flightSearchBox({
+        onSearch: function (query) { 
+            console.log(query);
+        }
+    });
+    jFlightSearch.open();
 });

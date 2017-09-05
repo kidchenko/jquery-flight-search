@@ -1593,9 +1593,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
     function onInputChanged(e) {
 
         var target = e.target;
-
-        console.log(parseInt(target.value), target.value);
-
         query[target.name] = isNaN(parseInt(target.value)) ? target.value : parseInt(target.value);
     }
 
@@ -1606,8 +1603,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
             departDate: getShortDate(query.departDate),
             returnDate: getShortDate(query.returnDate)
         });
-
-        console.log(finalQuery);
 
         opts.onSearch(finalQuery);
 

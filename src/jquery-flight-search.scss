@@ -1,4 +1,4 @@
-$mainBackground: ***REMOVED***;
+$mainBackground: ;
 $fontColor: #EEEEEE;
 $inputBackground: rgba(255, 255, 255, 0.1);
 $inputBorder: 1px solid $mainBackground + 20%;
@@ -55,7 +55,7 @@ $inputFontSize: 0.8em;
 
         & td a.ui-state-active {
             background-color: rgba(255, 255, 255, 0.2);
-        } 
+        }
     }
 
     .hasDatepicker {
